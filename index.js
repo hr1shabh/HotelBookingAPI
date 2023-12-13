@@ -8,6 +8,12 @@ import roomsRouter from "./routes/rooms.js"
 import cookieParser from "cookie-parser";
 const app = express()
 dotenv.config()
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3001');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
 
 const connect = async () => {
     try{
