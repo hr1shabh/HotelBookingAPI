@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 const app = express()
 dotenv.config()
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3001');
+    res.header('Access-Control-Allow-Origin', 'https://hotel-booking-frontend-hrg0wysnv-hr1shabhs-projects.vercel.app');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
